@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import TodoCard from "../components/TodoCard";
+import TodoListItem from "../components/TodoListItem";
 import Loading from "../components/Loading";
 
 const Home = () => {
@@ -21,20 +21,16 @@ const Home = () => {
             });
     }, []);
 
-    for (let i = 0; i < todos.length; i++) {
-        console.log("Todo: " + todos[i].priority);
-    }
-
     if (loading) {
         return(<Loading/>);
     }
 
     return (
-        <div className="todo-container">
+        <ul className="todo-container">
             {todos.map( (item) => 
-                <TodoCard key="{item._id}" todo={item}/>
+                <li><TodoListItem key="{item._id}" todo={item}/></li>
             )}
-        </div>
+        </ul>
     );
 };
 

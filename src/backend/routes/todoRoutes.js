@@ -80,7 +80,7 @@ router.put("/:id", async (request, response) => {
             todo.completed = request.body.markCompletion;
             await Todo.findByIdAndUpdate(id, todo);
 
-            return response.status(200).send({ message: `Updated completion of todo with id: ${id}`});
+            return response.status(200).send({ message: `Updated completion of todo with id: ${id} to ${todo.completed}`});
         }
 
         if ((request.body.title && request.body.title.trim() == "") || 
