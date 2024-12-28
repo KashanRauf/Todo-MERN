@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.todo-container {
+  margin: 0 auto;
+  padding: 5px;
+  width: 50%;
+  display: grid;
+  gap: 12px;
+}
+
+@media screen and (min-width: 640px) {
+  .todo-container {grid-template-columns: 1fr 1fr;} 
+}
+
+@media screen and (min-width: 768px) {
+  .todo-container {grid-template-columns: 1fr 1fr 1fr;} 
+}
+
+@media screen and (min-width: 1024px) {
+  .todo-container {grid-template-columns: 1fr 1fr 1fr 1fr;} 
+}
+
+/* TodoCard styles */
+.todo-card {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: relative;
+  height: 50px;
+}
+
+.priority-level {
+  border-radius: 5px;
+  font-size: x-small;
+  color: white;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.low-priority {
+  background-color: rgb(144, 255, 144);
+}
+
+.medium-priority {
+  background-color: rgb(231, 231, 107);
+}
+
+.high-priority {
+  background-color: rgb(252, 105, 105);
+}
