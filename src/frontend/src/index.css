@@ -55,3 +55,24 @@ body {
 .high-priority {
   background-color: #fa5252;
 }
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.bsinfocircle{
+  /* font-size: x-large; */
+  color: #166534;
+}
+
+.aioutlineedit {
+  /* font-size: x-large; */
+  color: #ca8b04;
+}
+
+.mdoutlinedelete {
+  /* font-size: x-large; */
+  color: #dc2626;
+}

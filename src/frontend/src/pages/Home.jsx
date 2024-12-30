@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import TodoListItem from "../components/TodoListItem";
 import Loading from "../components/Loading";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const [todos, setTodos] = useState([]);
     const [loading, setLoading] = useState(false);
+
+    // Add a new todo button
 
     useEffect(() => {
         setLoading(true);
@@ -26,11 +29,14 @@ const Home = () => {
     }
 
     return (
-        <ul className="todo-container">
-            {todos.map( (item) => 
-                <li><TodoListItem key="{item._id}" todo={item}/></li>
-            )}
-        </ul>
+        <>
+            <Link to="/todos/new"><p>New todo here</p></Link>
+            <ul className="todo-container">
+                {todos.map( (item) => 
+                    <li><TodoListItem key="{item._id}" todo={item}/></li>
+                )}
+            </ul>
+        </>
     );
 };
 

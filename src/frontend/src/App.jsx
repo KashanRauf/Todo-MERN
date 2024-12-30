@@ -18,7 +18,7 @@ export function priorityLevel(todo) {
 const App = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/todos/" element={<Home />} />
             <Route path="/todos/details/:id" element={<ViewTodo />} />
             <Route path="/todos/new" element={<NewTodo />} />
             <Route path="/todos/edit/:id" element={<EditTodo />} />
